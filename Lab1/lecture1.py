@@ -99,7 +99,7 @@ def isEven(x):
   return False
 
 def filterEvens(l):
-  return filter(isEven, l)
+  return list(filter(isEven, l))
 
 
 # print(filter(isOdd, [1, 2, 3, 4]))
