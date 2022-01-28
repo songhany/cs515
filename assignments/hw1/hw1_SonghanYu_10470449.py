@@ -26,9 +26,10 @@ def mean(L):
 
 
 # test case
-print(factorial(3))
-print(factorial(4))
-print(factorial(5))
-print(mean([1, 3, 5]))
-print(mean([1, 1, 1]))
-print(mean([1, 3, 5, 7, 9]))
+if __name__ == "__main__":
+  print(factorial(3))
+  print(factorial(4))
+  print(factorial(5))
+  print(mean([1, 3, 5]))
+  print(mean([1, 1, 1]))
+  print(mean([1, 3, 5, 7, 9]))
