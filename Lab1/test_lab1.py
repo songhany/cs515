@@ -6,7 +6,7 @@ Created on Jan 20, 2015
 CS115 - Lab 1 Test Script
 '''
 import unittest
-import lab1_demo as lab1
+import lab1 as lab1
 
 class Test(unittest.TestCase):
 
