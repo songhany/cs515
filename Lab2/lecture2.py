@@ -10,7 +10,7 @@
 
 # def rightTrianglesCount():
 #   lst = [[1, 2, 3], [3, 4, 5], [1, 1, sqrt(2)]]
-#   return filter(lambda l: (l[0]**2 + l[1]**2 == l[2]**2), lst)  # this is not right
+#   return filter(lambda l: (l[0]**2 + l[1]**2 == l[2]**2), lst)  # this is not totally right
 
 # print(rightTrianglesCount())
 

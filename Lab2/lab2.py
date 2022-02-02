@@ -13,11 +13,11 @@ def dot(L, K):
     '''Input: list
         Output: sum of the products of the elements '''
     if len(L) != len(K):
-        "try again!"
+        return "try again"
     elif len(L) == 0 or len(K) == 0:
         return 0.0
     else:
-        return L[0] * K[0] + dot(L[1:], K[1:])
+        return L[0]*K[0] + dot(L[1:], K[1:])
 
 
 def explode(S):
@@ -39,7 +39,12 @@ def ind(e,L):
 
 
 def removeAll(e,L):
-    pass
+    if L == []:
+        return []
+    if L[0] == e:
+        return removeAll(e, L[1:])
+    else:
+        return [L[0]] + removeAll(e, L[1:])
 
 
 def myFilter(f,L):

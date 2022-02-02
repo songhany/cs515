@@ -9,8 +9,6 @@ def reverse(l):
     return l[::-1]
 
 
-
-
 def dbl(n):
     return 2*n
 
