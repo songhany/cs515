@@ -1,6 +1,6 @@
 '''
-Created on _______________________
-@author:   _______________________
+Created on Feb 4, 2022
+@author:  Songhan Yu  10470449
 
 CS515 - Hw 2
 '''
