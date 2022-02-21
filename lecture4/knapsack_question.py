@@ -19,7 +19,7 @@ def knapsack_updated(capacity, items):
         return knapsack_updated(capacity, items[1:])
     else:
         resultList = knapsack_updated(capacity - items[0][0], items[1:])
-        use_it = [resultList[0] + items[0][1], [items[0]] + resultList[1]]   # [items[0]] + resultList[1] is order matter 
+        use_it = [resultList[0] + items[0][1], [items[0]] + resultList[1]]   # [items[0]] + resultList[1] orders matter. It will influence order of list 
         lose_it = knapsack_updated(capacity, items[1:])
         if use_it[0] > lose_it[0]:
             return use_it
