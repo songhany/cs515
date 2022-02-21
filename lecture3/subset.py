@@ -25,7 +25,7 @@ def knapsack(capacity, items):
         loseIt = knapsack(capacity, items[1:])
         return max(useIt, loseIt)
 
-print(knapsack(76, [[36, 35], [10, 28], [39, 47], [8, 1], [7, 24]]))
+# print(knapsack(76, [[36, 35], [10, 28], [39, 47], [8, 1], [7, 24]]))
 
 def change(amount, coins):
     if amount <= 0:
