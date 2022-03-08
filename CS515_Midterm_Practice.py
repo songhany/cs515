@@ -17,7 +17,8 @@
 
 def LCS(S1, S2):
     """Length of longest common subsequence of two lists."""
-    if S1 == "" or S2 == "": return 0
+    if S1 == "" or S2 == "": 
+        return 0
     elif S1[0] == S2[0]:  
         return 1 + LCS(S1[1:], S2[1:])
     else:
@@ -43,11 +44,15 @@ LCS("hi", "bi")
 ###########################################################################
 
 def quiz(n,k):
-    if k == 0: return 1
+    if k == 0: 
+        return 1
     elif k % 2 == 0:
         t = quiz(n, k//2)
         return t*t
-    else: return n * quiz(n,k-1)
+    else: 
+        return n * quiz(n,k-1)
+
+print(quiz(2,7))  # 128
 
 ###########################################################################
 # Write out the trace of function calls starting from fab(4,3) for the
@@ -65,11 +70,18 @@ def fab(n,k):
     else:
         return fab(n-2,k) + fab(n-1,k)
 
+print(fab(4,3))
+
 '''
 Your trace here
 
-
-
+                  fab(4,3) = 18
+             /                \  
+        fab(2, 3)             fab(3, 3)
+        /      \              /         \
+    fab(0, 3)  fab(1,3)   fab(1, 3)     fab(2, 3)
+                                         /   +   \
+                                    fab(0,3)  fab(1,3)
 '''
 
 
@@ -104,7 +116,7 @@ print(R)
 ###########################################################################
 
 def poly(N):
-    pass # TO-DO your code here
+    return map(lambda x: 3*x**2+3, range(N))
 
 
 def testPoly():
@@ -121,13 +133,11 @@ def multAll(n, L):
        make a list by multiplying each element of L by n.
        For example, multAll(3,[3,5,7,9]) is [9,15,21,27].'''
     if L==[]:
-
-        return None # TO-DO replace None 
-
-
+        return [] 
     else:
+        return [] + [n * L[0]] + multAll(n, L[1:])
 
-        return None # TO-DO replace None 
+print(multAll(3, [3, 5, 7, 9]))
 
 ###########################################################################
 # Complete this function so it uses assert to test multAll on at 
@@ -135,7 +145,9 @@ def multAll(n, L):
 ###########################################################################
 
 def testMultAll():
-    pass # TO-DO
+    assert multAll(3, [3, 5, 7, 9]) == [9,15,21,27]
+
+testMultAll()
 
 ###########################################################################
 # Complete the following function, using recursion on the lists.  That means 
@@ -146,17 +158,23 @@ def testMultAll():
 ###########################################################################
 
 def listProd(L,M):
-    '''Assume L and M are lists of  numbers.  Return a list of their products
+    '''Assume L and M are lists of numbers.  Return a list of their products
     at corresponding indexes.  If one list is longer than the other, include its 
     elements at the end.  See testProd for examples.'''
-
-    pass # TO-DO 
+    if L == []:
+        return M
+    elif M == []:
+        return L
+    else:
+        return [L[0] * M[0]] + listProd(L[1:], M[1:])
 
 def testProd():
     assert listProd([1,2,3], [1,2,3]) == [1, 4, 9]
     assert listProd([1,5,1], [2,3,3]) == [2,15,3]
     assert listProd([], [1,3,5,7]) == [1,3,5,7]
     assert listProd([1,2,3], [6,5,4,9,8,7]) == [6,10,12,9,8,7]
+
+testProd()
 
 ###########################################################################
 # Below is an implementation of the longest common subsequence function.
@@ -179,12 +197,26 @@ def LCS(S1,S2):
     return result
 
 
+memo = {}
+
+def LCSWithMemo(S1,S2):
+    '''Length of the longest common subsequence of strings S1, S2.'''
+    if (S1, S2) in memo:
+        return memo[(S1, S2)]
+    if S1 == "" or S2 == "": 
+        result = 0
+        memo[(S1, S2)] = result 
+    elif S1[0] == S2[0]:
+        result = 1 + LCS(S1[1:], S2[1:])
+        memo[(S1, S2)] = result
+    else:
+        chopS1 = LCS(S1[1:], S2)
+        chopS2 = LCS(S1, S2[1:])
+        result = max(chopS1, chopS2)
+    return result
 
 def testLCS():
     assert LCS("sam","spam!") == 3
     assert LCS("veto", "vote") == 2
     assert LCS("tranquil", "trail") == 5
-
-
-
 
