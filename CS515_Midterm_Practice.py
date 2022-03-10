@@ -207,11 +207,11 @@ def LCSWithMemo(S1,S2):
         result = 0
         memo[(S1, S2)] = result 
     elif S1[0] == S2[0]:
-        result = 1 + LCS(S1[1:], S2[1:])
+        result = 1 + LCSWithMemo(S1[1:], S2[1:])
         memo[(S1, S2)] = result
     else:
-        chopS1 = LCS(S1[1:], S2)
-        chopS2 = LCS(S1, S2[1:])
+        chopS1 = LCSWithMemo(S1[1:], S2)
+        chopS2 = LCSWithMemo(S1, S2[1:])
         result = max(chopS1, chopS2)
     return result
 
