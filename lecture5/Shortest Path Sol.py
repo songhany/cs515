@@ -72,7 +72,8 @@ def helper_function(source, nextCity, Cities, Dists):
 
 
 def shortestPath(Cities, Dists):
-    if len(Cities) == 1: return 0
+    if len(Cities) == 1: 
+        return 0
     else:
         return min(map(lambda nxtCit: helper_function(0, nxtCit, Cities, Dists), range(1,len(Cities))))
 
@@ -83,7 +84,8 @@ shortestPath(cities, distances)
 
 
 def shortestPathV2(Cities, Dists):
-    if len(Cities) == 1: return 0
+    if len(Cities) == 1: 
+        return 0
     else:
         return min(
                 map(lambda nxtCit: Dists[( Cities[0], Cities[nxtCit])] + shortestPath(Cities[nxtCit:], Dists),
