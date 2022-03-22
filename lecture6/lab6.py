@@ -14,6 +14,7 @@ def numToBinary(n):
 # print(numToBinary(5))  # 101
 
 
+
 def binaryToNum(s):
     if s == '':
         return 0

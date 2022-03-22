@@ -92,5 +92,6 @@ class Test(unittest.TestCase):
         self.assertEqual(lab6.ternaryToNum('10201'), 100)
         self.assertEqual(lab6.ternaryToNum('11212102222000'), 2587194)
 
+
 if __name__ == "__main__":
     unittest.main()
