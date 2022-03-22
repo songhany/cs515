@@ -8,7 +8,7 @@ CS115 - Lab 6 Test Script
 '''
 import unittest
 import sys
-import SolutionFile #Update this
+import lab6
 from io import StringIO
 
 class Test(unittest.TestCase):
