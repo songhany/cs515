@@ -43,6 +43,9 @@ def increment(s):
     b = numToBinary(dec + 1)
     return '0'* max(0, 8 - len(b)) + b[-8:]
 
+# print(increment('00000001'))  # 00000010
+# print(increment('11111111'))  # 00000000
+
 def count(s, n):
     '''Precondition: s is an 8-bit string and n >= 0.
     Prints s and its n successors.'''
@@ -52,6 +55,9 @@ def count(s, n):
     else:
         x = increment(s)
         return count(x, n-1)
+
+# print(count("00000000", 4))
+# print(count("11111110", 5))
 
 
 def numToTernary(n):
@@ -67,6 +73,7 @@ def numToTernary(n):
     elif n%3 == 0:
         return numToTernary(n//3) + "0"
 
+
 def ternaryToNum(s):
     '''Precondition: s is a string of 0s, 1s, and 2s.
     Returns the integer corresponding to the ternary representation in s.
@@ -75,3 +82,10 @@ def ternaryToNum(s):
         return 0
     else:
         return ternaryToNum(s[:-1])*3 + int(s[-1])
+
+
+print(numToTernary(42))  # 1120
+print(numToTernary(4242))  # 12211010
+
+print(ternaryToNum('1120'))  # 42
+print(ternaryToNum('12211010'))  # 4242
