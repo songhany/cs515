@@ -34,6 +34,8 @@ def binaryToNum2(s):
             return binaryToNum(s[:-1])*2 + 1
         else:
             return binaryToNum(s[:-1])*2
+
+
 def increment(s):
     '''Precondition: s is a string of 8 bits.
     Returns the binary representation of binaryToNum(s) + 1.'''
@@ -50,6 +52,7 @@ def count(s, n):
     else:
         x = increment(s)
         return count(x, n-1)
+
 
 def numToTernary(n):
     '''Precondition: integer argument is non-negative.
