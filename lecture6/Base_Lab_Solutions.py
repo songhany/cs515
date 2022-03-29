@@ -35,7 +35,7 @@ def binaryToNum2(s):
         else:
             return binaryToNum(s[:-1])*2
 
-def binaryToNum3(s):  # binaryToNum2 another way of writing
+def binaryToNum3(s):  # binaryToNum2 another version
     if s == "":
         return 0
     else:

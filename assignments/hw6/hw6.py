@@ -66,7 +66,7 @@ def compress(S):
         return numToBinaryStringWithPadZero(num, COMPRESSED_BLOCK_SIZE) + c[0] + compress(S[(num+c[1]):])
 
 def compressHelper(S, n):
-    '''takes a binary string S of length 64'''
+    '''takes a binary string S of length 64 and a number'''
     if S == '':
         return ['', 0]
     num = cnt(S, n, MAX_RUN_LENGTH)
