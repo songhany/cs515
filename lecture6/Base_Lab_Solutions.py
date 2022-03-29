@@ -35,6 +35,17 @@ def binaryToNum2(s):
         else:
             return binaryToNum(s[:-1])*2
 
+def binaryToNum3(s):  # binaryToNum2 another way of writing
+    if s == "":
+        return 0
+    else:
+        return binaryToNum(s[:-1])*2 + int(s[-1])  # combine if else in binaryToNum2 to single statement
+
+
+# print(binaryToNum("1011"))  # 11
+# print(binaryToNum1("1011"))  # 11 
+# binaryToNum1("1011")  # 11
+print(binaryToNum3("1011"))  # 11
 
 def increment(s):
     '''Precondition: s is a string of 8 bits.
@@ -84,8 +95,8 @@ def ternaryToNum(s):
         return ternaryToNum(s[:-1])*3 + int(s[-1])
 
 
-print(numToTernary(42))  # 1120
-print(numToTernary(4242))  # 12211010
+# print(numToTernary(42))  # 1120
+# print(numToTernary(4242))  # 12211010
 
-print(ternaryToNum('1120'))  # 42
-print(ternaryToNum('12211010'))  # 4242
+# print(ternaryToNum('1120'))  # 42
+# print(ternaryToNum('12211010'))  # 4242
