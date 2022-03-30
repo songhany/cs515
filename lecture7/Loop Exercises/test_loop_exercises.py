@@ -1,5 +1,5 @@
 import unittest
-import loop_exercises_solutions as loop_exercises
+import loop_exercises as loop_exercises
 
 class Test(unittest.TestCase):
 

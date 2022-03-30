@@ -1,5 +1,5 @@
 '''
-@author:
+@author:  Songhan Yu
 
 Objective: To become familiar with imperative style and for and while loops.
 
@@ -12,6 +12,7 @@ Objective: To become familiar with imperative style and for and while loops.
 ' Hint: adapt the body of addQuestmark().
 '''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 from functools import reduce
+from unittest import result
 
 def questify(str_list):
     '''Assume str_list is a list of strings. Returns a list of
@@ -24,7 +25,12 @@ def questify(str_list):
 
 def questifyAlt(str_list):
     '''Same as questify'''
-    pass #TODO
+    for i in range(len(str_list)):
+        str_list[i] += '?'
+    return str_list
+
+# print(questify(['s', 'a']))
+# print(questifyAlt(['s', 'a']))
 
 '''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 ' Exercise 2
@@ -63,7 +69,11 @@ def catenate(str_list):
 
 def catenateLoop(str_list):
     '''Same as catenate'''
-    pass #TODO
+    result = ''
+    for word in str_list:
+        result += word
+    return result
+
 
 '''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 ' Exercise 3
@@ -91,7 +101,11 @@ def letterScoreLoop(letter, scorelist):
     '''Same as letterScore'''
     # HINTS: You can rely on the assumption that letter occurs in scorelist.
     # It may be helpful to use an if-statement without an else.
-    pass #TODO
+    for idx in range(len(scorelist)):
+        if (letter == scorelist[idx][0]):
+            return scorelist[idx][1]
+    return "Letter not found"
+
 
 '''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 ' Exercise 4
@@ -108,7 +122,11 @@ def wordScore(S, scorelist):
 
 def wordScoreLoop(S, scorelist):
     '''Same as wordScore'''
-    pass #TODO
+    score = 0
+    for letter in S:
+        score += letterScore(letter, scorelist)
+    return score
+
 
 '''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 ' Exercise 5
@@ -126,7 +144,8 @@ def wordsWithScore(dct, scores):
 
 def wordsWithScoreLambda(dct, scores):
     '''Same as wordsWithScore'''
-    pass #TODO
+    return list(map(lambda wrd : [wrd, wordScore(wrd, scores)]))
+
 
 '''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 ' Exercise 6
@@ -135,4 +154,7 @@ def wordsWithScoreLambda(dct, scores):
 '''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 def wordsWithScoreLoop(dct, scores):
     '''Same as wordsWithScore'''
-    pass #TODO
+    resultLst = []
+    for wrd in dct:
+        resultLst.append([wrd, wordScore(wrd, scores)])
+    return resultLst 
