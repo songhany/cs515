@@ -1,19 +1,19 @@
 # not right
-def binarySearchRecursion(lst, target):
-    if (lst == [] or len(lst) == 0):
-        return 
+def binarySearchRecursion(lst, left, right, target):
 
-    left = 0;
-    right = len(lst) - 1
-    
-    mid = left + (right - left) // 2
-    if target == lst[mid]:
-        return mid
-    elif target > lst[mid]:
-        return binarySearchRecursion(lst[mid: right+1], target)
+    if left <= right:
+        mid = left + (right - left) // 2
+
+        if lst[mid] == target:
+            return mid
+        elif lst[mid] > target:
+            return binarySearchRecursion(lst, left, mid-1, target)
+        else:
+            return binarySearchRecursion(lst, mid+1, right, target)
     else:
-        return binarySearchRecursion(lst[left: mid], target)
+        return -1
 
-# print(binarySearchRecursion([1, 2, 3, 4, 5, 6, 7], 5))
-
+arr = [1, 2, 3, 4, 5, 6, 7]
+print(binarySearchRecursion(arr, 0, len(arr), 5))
+print(binarySearchRecursion(arr, 0, len(arr), 1))
 
