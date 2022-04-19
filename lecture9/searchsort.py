@@ -13,7 +13,6 @@ def sequential_search(lst, key):
     return -1
 
 
-
 def binary_search(lst, key):
     '''Searches the list for the key. If the key is present, the function
     returns the index of the key. Otherwise, it returns -1.
@@ -68,7 +67,8 @@ if index >= 0:
     print('Key %d found at index %d.' % (key, index))
 else:
     print('Key %d not found, but can be inserted at index %d.' % (key, -index - 1))
-    
+
+
 ### Speed Comparison ###
 print("Searching over a list with 1M elements ... ")
 lst = [random.randint(1, 1000) for _ in range(50000000)]
