@@ -15,26 +15,37 @@ class Person:
 
 
 class Student:
-    def __init__(self, first, last, age) -> None:
+    def __init__(self, first, last, gpa) -> None:
         Person.__init__(self, first, last)
-        self.age = age
+        self.gpa = gpa
     
     def asleep(self, time):
         return 3 <= time <= 11
     
     def __str__(self) -> str:
-        return Person.__str__(self) + ", asleep is " + str(self.asleep(4))
+        return Person.__str__(self) + ", " + " GPA=" +  str(self.gpa)
 
 
-class Duck(Student):
-    def __init__(self, first, last, age, dorm) -> None:
-        Student.__init__(self, first, last, age)
-        self.dorm = dorm
+class SITstudent(Student):
+    def __init__(self, first, last):
+        Student.__init__(self, first, last, 0)
+        self.grades = []
     
-    def asleep(self, time):
-        return super().asleep(time)
+    def __str__(self):
+        return Person.__str__(self)
+
+    def status(self, time):
+        if self.asleep(time):
+            return str(self) + " is asleep now."
+        return str(self) + " is gaming or studying."
+
+    def getGrade(self, score):
+        self.grades += [score]
+        self.gpa = sum(self.grades) / len(self.grades)
+
+    def getGrade(self):
+        return self.grades
 
 
-d = Duck("songhan", "yu", 18, "Washington Street")
-print(d)
-print(d.asleep(5))
+someone = SITstudent("Jean", "Zu")
+print(someone.status(10))
