@@ -1,6 +1,6 @@
 # fastLCS (DN last rev Oct 2020)
 
-# LCS as in the book
+# LCS - Longest Common Subsequence  as in the book
 
 def LCS(S1, S2):
     """Length of longest common subsequence."""

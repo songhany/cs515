@@ -34,7 +34,7 @@ def exp(n,k):
     else:
         return n*exp(n, k-1)
 
-def exp_alt(n,k, a = 1):
+def exp_alt(n, k, a = 1):
     if k == 0:
         return a
     else:

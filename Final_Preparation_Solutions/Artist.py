@@ -3,15 +3,19 @@ class Player :
         self.name = name
         self.genre = genre
         self.instruments = []
+
     def __str__ (self):
         '''The artist and their instruments '''
-        return " Artist " + self.name + " plays " + ", ".join (self.instruments)
+        return " Artist " + self.name + " plays " + ", ".join(self.instruments)
+
     def copy ( self ):
-        p = Player (self.name , self.genre)
+        p = Player(self.name , self.genre)
         p.instruments = list(self.instruments)
         return p
+
     def addInst (self , instrument ):
         self.instruments.append (instrument)
+
     def __eq__(self, other):
         a = list(self.instruments)
         b = list(other.instruments)
@@ -33,5 +37,7 @@ p0.addInst("guitar")
 p1 = Player("Attile Duck", "jazz")
 p1.addInst("guitar")
 p1.addInst("kazzo")
-print(p0 == p1)
-    
+print(p0 == p1)  # True
+
+p1.addInst("piano") 
+print(p0 == p1)  # False

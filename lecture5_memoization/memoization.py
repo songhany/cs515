@@ -21,23 +21,23 @@ def fibN1(n):
 print(fibN1(5))
 
 
-memo = {}
-def fibN(n):
-    if n in memo:
-        return memo[n]
-    if n < 0:
-        return 'Incorrect Input'
-    elif n == 0:
-        memo[n] = 0
-        return 0
-    elif n == 1 or n == 2:
-        memo[n] = 1
-        return 1
-    else:
-        result = fibN(n-1) + fibN(n-2)
-        memo[n] = result  # this just store one result
-        return result
+# memo = {}
+# def fibN(n):
+#     if n in memo:
+#         return memo[n]
+#     if n < 0:
+#         return 'Incorrect Input'
+#     elif n == 0:
+#         memo[n] = 0
+#         return 0
+#     elif n == 1 or n == 2:
+#         memo[n] = 1
+#         return 1
+#     else:
+#         result = fibN(n-1) + fibN(n-2)
+#         memo[n] = result  # this just store one result. Please store as much as possible
+#         return result
 
-print(fibN(5))
+# print(fibN(5))
 
 

@@ -4,7 +4,7 @@ def squareSums(n):
     '''list of the first n sums of squares'''
     L = []
     s = 0
-    for i in range(1,n+1):
+    for i in range(1, n+1):
         s += i*i
         L.append(s)
     return L
@@ -16,5 +16,16 @@ def squareSums(n):
 
 def squareSumsTrace(n):
     '''self-tracing version of squareSums'''
-    #TODO
-    pass
+    L = []
+    s = 0
+    print("s\ti\tL")
+    print("-----------------------------")
+    
+    for i in range(1,n+1):
+        print(str(s) + "\t" + str(i) +"\t"+ str(L))
+        s += i*i
+        L.append(s)
+    print(str(s) + "\t"+ str(i) +"\t" + str(L))
+    return L
+
+# squareSumsTrace(5)

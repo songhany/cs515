@@ -79,3 +79,5 @@ def test():
         m.set_hourly_rate(m.get_hourly_rate() + 20) # she earned it 
         print(m) # This will call Employee.__str__ which will call Manager.get_total_compensation
                  # She's making 110,000.00 
+
+test()

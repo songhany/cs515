@@ -8,6 +8,7 @@ def knapsack(capacity, items):
         lose_it = knapsack(capacity, items[1:])
         return max(use_it, lose_it)
 
+
 def knapsack_updated(capacity, items):
     """Given a container of a given integer 'capacity', and a list of items 
        'items' where each item is of the form [weight, value], returns a list 

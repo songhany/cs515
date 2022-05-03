@@ -39,13 +39,24 @@ class SITstudent(Student):
             return str(self) + " is asleep now."
         return str(self) + " is gaming or studying."
 
-    def getGrade(self, score):
+    def addGrade(self, score):
         self.grades += [score]
-        self.gpa = sum(self.grades) / len(self.grades)
+        self.gpa = sum(self.grades) / len(self.grades)        
 
-    def getGrade(self):
+    def getGrades(self):
         return self.grades
 
 
 someone = SITstudent("Jean", "Zu")
 print(someone.status(10))
+
+alice = SITstudent("Alice", "Cleverness")
+alice.addGrade (70)
+alice.addGrade (80)
+print ("Alice’s grades " + str(alice.getGrades()))
+agrad = alice.getGrades()
+agrad[0] = 100      # this will change alice grades list (easy make MISTAKE)
+print("Alice’s grades now " + str(alice.getGrades()))
+# SOLUTION
+# Alice ’s grades [70, 80]
+# Alice ’s grades now [100, 80]

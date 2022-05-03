@@ -34,10 +34,10 @@ y.setAge(7)
 B[0] = Cat("tigger", 1) 
 D[0].setAge(8)
 
-print("A ", list(map(str, A)))
-print("B ", list(map(str, B)))
-print("C ", list(map(str, C)))
-print("D ", list(map(str, D)))
+print("A ", list(map(str, A)))  # A  ['tigger 1', 'Fluffy 7']
+print("B ", list(map(str, B)))  # B  ['tigger 1', 'Fluffy 7']
+print("C ", list(map(str, C)))  # C  ['Fluffy 6', 'Fluffy 7']
+print("D ", list(map(str, D)))  # D  ['Fluffy 8', 'Fluffy 5']
 
     
 

@@ -15,7 +15,7 @@ def change(amount, coins):
         return change(amount, coins[1:])
     else:
         useIt = 1 + change(amount - coins[0], coins)    # don't skip the first coin, because I can reuse it
-        
+
         loseIt = change(amount, coins[1:])
         return min(useIt, loseIt)
 

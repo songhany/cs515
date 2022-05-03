@@ -40,3 +40,6 @@ def squareSumsTrace(n):
         L.append(s)
     print(str(s) + "\t"+ str(i) +"\t" + str(L))
     return L
+
+print(squareSums(5))
+print(squareSumsTrace(5))
