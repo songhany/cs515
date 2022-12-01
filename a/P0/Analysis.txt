@@ -1,0 +1,36 @@
+Task0  O(1)   
+This is no any loop and recursion(call stack), so this is constant time
+
+
+Task1  O(n)   
+The for loop going through the range of calls has linear time complexity O(n).
+Then, we check if the number is in the list. The `in` operation on a list has linear time complexity O(m).
+The `add()` statement has constant time complexity O(1). So, the for loop overral has time complexity: O(m * n * 1). 
+We can simplify it to O(n) linear time.
+
+
+Task2  O(n)
+The for loop going through the range of calls has linear time complexity O(n).
+There are two for loop and they are non-nested, so we have linear time complexity O(2n) -> O(n).
+The `in` operation on a list has linear time complexity O(m). So, the for loop overral has time complexity: O(m * 2n * 1).
+We can simplify it to O(n) linear time.
+
+
+Task3  
+PartA  
+O(n) + O(klogk)  
+The for loop going through the range of calls has linear time complexity O(n). The `in` operation on a list has linear time complexity O(m). The `add()` statement has constant time complexity O(1).
+Assume there is k area code in hashSet. The `sorted()` statement has time complexity O(klogk).
+Because `sorted()` is non-nested into for loop, the for loop overral has time complexity: O(m * n * 1) + O(klogk). 
+We cannot ensure n is far large than k. We just simplify it to O(n + klogk).
+
+PartB  O(n)   
+The for loop going through the range of calls has linear time complexity O(n). The `in` operation on a list has linear time complexity O(m).
+The for loop overral has time complexity: O(m * n * 1). We can simplify it to O(n) linear time.
+
+
+Task4
+The for loop going through the range of calls and texts has linear time complexity O(n).
+There are three for loop and they are non-nested, so we have linear time complexity O(3n) -> O(n).
+Assume there is k number in list. The `sorted()` statement has time complexity O(klogk).
+We cannot ensure n is far large than k. We just simplify it to O(n + klogk).
