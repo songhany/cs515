@@ -28,9 +28,12 @@ def swap(string, i, j):
     string[i] = string[j]
     string[j] = tmp
 
+# print(permutations('ab'))
+# print(permutations('abc'))
+# print(permutations('abcd'))
 
 
-def permutations1(string):
+def permutations_sol(string):
     return recursion(string, 0)
 
 def recursion(string, index):
@@ -52,6 +55,6 @@ def recursion(string, index):
     return output
 
 
-print(permutations1('ab'))
-print(permutations1('abc'))
-print(permutations1('abcd'))
+print(permutations_sol('ab'))
+print(permutations_sol('abc'))
+print(permutations_sol('abcd'))

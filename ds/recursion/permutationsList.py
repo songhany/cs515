@@ -36,7 +36,7 @@ def swap(inputList, i, j):
 # print(permute([0, 1, 2]))
 
 
-def permute1(inputList):
+def permute_sol(inputList):
     finalCompoundList = []
 
     if len(inputList) == 0:
@@ -47,7 +47,7 @@ def permute1(inputList):
         rest_list = inputList[after_first]   # convert the `slice` object into a list
 
         # Call the recursive function to split the `rest_list` further until it meets the base condition and store the last `finalCompoundListres` output into `sub_compoundList` variable
-        sub_compoundList = permute1(rest_list)
+        sub_compoundList = permute_sol(rest_list)
 
         # Once the recursion function meets the base condition, we can build the permutation by iterating through all lists of the `compoundList` returned from previous recursive call
         for aList in sub_compoundList:
@@ -62,7 +62,7 @@ def permute1(inputList):
     return finalCompoundList
 
 
-print(permute1([]))
-print(permute1([0]))
-print(permute1([0, 1]))
-print(permute1([0, 1, 2]))
+print(permute_sol([]))
+print(permute_sol([0]))
+print(permute_sol([0, 1]))
+print(permute_sol([0, 1, 2]))

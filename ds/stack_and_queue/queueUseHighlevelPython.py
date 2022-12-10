@@ -6,7 +6,7 @@ class Queue:
     def size(self):
          # TODO: Check the size of the Queue
         return len(self.storage)
-    
+
     def enqueue(self, item):
          # TODO: Enter item into Queue
         self.storage.append(item)
