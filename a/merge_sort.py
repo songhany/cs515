@@ -8,7 +8,7 @@ def Log_Linear_Example(our_list):
         return our_list
     
     else:
-        mid = len(our_list)//2
+        mid = len(our_list) // 2
         left = our_list[:mid]
         right = our_list[mid:]
 

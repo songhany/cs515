@@ -12,10 +12,12 @@ def area(r):
         Output: circumference of the circle with radius r """
     pi_val = 3.1415
     return pi_val*r**2
+
 #2. Show how to use math library
 from math import pi
 print(pi)
-from math import * #import all functions of math
+
+from math import *
 import math
 print(math.pi)
 
@@ -34,6 +36,7 @@ name2 = "Eva"
 #find length of a string
 len(name1)
 len("Hakuna Matata")
+
 #Indexing: Find the symbol that is located at any given position or index
 #The first symbol has index zero
 print(name2[0])
