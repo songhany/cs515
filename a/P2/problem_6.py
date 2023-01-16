@@ -1,3 +1,5 @@
+import random
+
 def get_min_max(ints):
     """
     Return a tuple(min, max) out of list of unsorted integers.
@@ -14,16 +16,31 @@ def get_min_max(ints):
             max_val = num
     return min_val, max_val
 
-## Example Test Case of Ten Integers
-import random
 
+## Example Test Case of Ten Integers
+# test case1
 l = [i for i in range(0, 10)]  # a list containing 0 - 9
 random.shuffle(l)
-
 print ("Pass" if ((0, 9) == get_min_max(l)) else "Fail")
 
 
-# def get_min_max1(ints):
+# test case2
+l1 = [i for i in range(9, 0, -1)]  # a list containing 1 - 99
+random.shuffle(l1)
+# print(l1)
+# print(get_min_max(l1))
+print ("Pass" if ((1, 9) == get_min_max(l1)) else "Fail")
+
+
+# test case3
+l2 = [i for i in range(-99, 100)]  # a list containing -99 - 99
+random.shuffle(l2)
+# print(get_min_max(l2))
+print ("Pass" if ((-99, 99) == get_min_max(l2)) else "Fail")
+
+
+
+# def get_min_max_sol1(ints):
 #     """
 #     Return a tuple(min, max) out of list of unsorted integers.
 

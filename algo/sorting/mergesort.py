@@ -4,14 +4,13 @@ def mergesort(items):
         return items
     
     mid = len(items) // 2
-    left = items[:mid]
-    right = items[mid:]
     
-    left = mergesort(left)
-    right = mergesort(right)
+    left = mergesort(items[:mid])
+    right = mergesort(items[mid:])
     
     return merge(left, right)
-    
+
+
 def merge(left, right):
     
     merged = []

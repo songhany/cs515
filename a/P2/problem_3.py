@@ -58,10 +58,12 @@ def test_function(test_case):
 
 
 
+# test case
 test_function([[1, 2, 3, 4, 5], [542, 31]])
 test_function([[4, 6, 2, 5, 9, 8], [964, 852]])
 test_function([[0, 9, 3, 6, 4], [940, 63]])
 
+test_function([[0, 0], [0, 0]])
 
 
 # def rearrange_digits1(input_list):  # O(n^2)

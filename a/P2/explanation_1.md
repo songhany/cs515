@@ -18,16 +18,12 @@ Space O(1)
 
 ## problem_3.py
 **why did you use that data structure?**  
-It starts by counting the occurrences of each integer in the input array using a dictionary.
-It then creates a sorted array of integers by traversing the dictionary in descending order and appending each integer to the array according to its count.
-Then it separates the sorted array into two arrays called num1 and num2. It then appends the integers from the sorted array to num1 and num2 alternatively.
-It lastly join the digits of both the number created by num1 and num2 and convert into int.
-It then return two maximum sums.
+I used hashmap and arraylist data structure
 
 **Time efficiency and Space efficiency**  
-Time O(n).  Because it traverses the input array once, creates a dictionary in O(n) time, and then creates the sorted array in O(n) time. The rest of the operations in the function are basic operations that take O(n) time.
+Time O(n * m).  There are three for loop traversal in this solution, since it traverses the input array, creates a dictionary in O(n) time. The `in` operation has linear time complexity O(m).
 
-Space O(n). Since I create a dictionary and two sorted array.  
+Space O(n).  Since I create a dictionary and two sorted array.  
 
 
 ## problem_4.py
