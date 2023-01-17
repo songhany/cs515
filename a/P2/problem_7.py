@@ -100,9 +100,9 @@ print(router.lookup("/root/m"))     # 'not found handler'
 # test case3
 print("===================================================")
 router.add_handler("/songhan", "personal")  # add a route
-print(router.lookup("/songhan"))       # 'personal' 
+print(router.lookup("/songhan"))            # 'personal' 
 
 # edge case1
 print("===================================================")
-router.add_handler("", "null")  # add a route
+router.add_handler("", "null")   # add a route
 print(router.lookup("/"))        # "null"
