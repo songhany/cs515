@@ -16,7 +16,7 @@ def dijkstra(graph, source):
 
     # As long as unvisited is non-empty
     while unvisited:
-        minNode = None
+        minNode = Nonegit
 
         # 1. Find the unvisited node having smallest known distance from the source node.
         for node in unvisited:
