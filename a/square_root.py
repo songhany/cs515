@@ -1,5 +1,8 @@
 def squareRoot(number, precision):   # https://www.geeksforgeeks.org/find-square-root-number-upto-given-precision-using-binary-search/
  
+    if number < 0:
+        return str(squareRoot(-number, precision)) + 'i'
+
     start = 0
     end, ans = number, 1
  
@@ -40,3 +43,14 @@ def squareRoot(number, precision):   # https://www.geeksforgeeks.org/find-square
 print(round(squareRoot(50, 3), 4))
 print(round(squareRoot(10, 4), 4))
 print(squareRoot(27, 8))
+print(squareRoot(-4, 0))
+
+
+# edge1
+print ("Pass" if  (0 == squareRoot(0, 0)) else "Fail")
+
+# edge2
+print ("Pass" if  ('2i' == squareRoot(-4, 0)) else "Fail")
+
+# edge3
+print ("Pass" if  (4294967296 == squareRoot(pow(2, 64), 0)) else "Fail")

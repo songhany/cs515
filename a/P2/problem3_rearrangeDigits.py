@@ -66,6 +66,7 @@ test_function([[0, 9, 3, 6, 4], [940, 63]])
 test_function([[0, 0], [0, 0]])
 
 
+
 # def rearrange_digits1(input_list):  # O(n^2)
 #     """
 #     Rearrange Array Elements so as to form two number such that their sum is maximum.

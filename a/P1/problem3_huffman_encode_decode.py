@@ -13,7 +13,7 @@ class TreeNode(object):
         self.huffmanCode = None
 
     def getHuffmanCode(self, key):
-        return self.getHuffmanCode
+        return self.huffmanCode
 
     def __lt__(self, other):   # https://stackoverflow.com/questions/8875706/heapq-with-custom-compare-predicate
         return self.v < other.v
