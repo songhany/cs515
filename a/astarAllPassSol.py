@@ -1,5 +1,6 @@
 import heapq   # This solution pass all test case
 
+
 class GraphNode(object):   
 
     def __init__(self, intersection, f, g, h):
@@ -8,7 +9,7 @@ class GraphNode(object):
         self.g = g   # `g` is the distance traveled from start node to the frontier
         self.h = h   # `h` is straight line distance from the frontier to the goal (heuristic)
 
-    def __lt__(self, other):   # https://stackoverflow.com/questions/8875706/heapq-with-custom-compare-predicate
+    def __lt__(self, other):
         return self.f < other.f
 
 
@@ -28,11 +29,11 @@ def shortest_path(M, start, goal):  # start: intersection  goal: intersection
 
     while len(minheap) != 0:
         curNode = heapq.heappop(minheap)   # curNode is instance of GraphNode instance
-        visited.add(curNode.i)            # Mark the current node as visited
+        visited.add(curNode.i)             # Mark the current node as visited
 
         # Get the neighbors of the current node
         for neighbor in M.roads[curNode.i]:
-            if neighbor == goal:   # type(neighbor) == int. if neighbor is the goal, stop search
+            if neighbor == goal:   # type(neighbor) == int. if neighbor is the goal
                 prev[neighbor] = curNode.i
                 path = []
                 cur = neighbor
@@ -43,7 +44,7 @@ def shortest_path(M, start, goal):  # start: intersection  goal: intersection
                 path.reverse()
                 return path 
 
-            else:  # if neighbor != goal 
+            else:
                 if neighbor in visited:
                     continue
                 # calculate g, h, f for the neighbor node
