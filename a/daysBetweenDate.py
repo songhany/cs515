@@ -62,6 +62,6 @@ def daysBetweenDates(year1, month1, day1, year2, month2, day2):
     return days
 
 
-# print(daysBetweenDates(2013, 1, 24, 2013, 6, 29))
+print(daysBetweenDates(2013, 1, 24, 2013, 6, 29))
 # print(daysBetweenDates(1912, 12, 12, 2012, 12, 12))
 # print(daysBetweenDates(2017, 12, 30, 2018, 1, 1))
