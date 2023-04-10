@@ -28,7 +28,7 @@ def shortest_path(M, start, goal):  # start: intersection  goal: intersection
 
     while len(minheap) != 0:
         curNode = heapq.heappop(minheap)   # curNode is instance of GraphNode instance
-        visited.add(curNode.i)            # Mark the current node as visited
+        visited.add(curNode.i)             # Mark the current node as visited
 
         # Get the neighbors of the current node
         for neighbor in M.roads[curNode.i]:
